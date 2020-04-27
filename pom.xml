@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.xmliu.appservice</groupId>
-    <artifactId>app-service-demo</artifactId>
+    <groupId>com.pertest</groupId>
+    <artifactId>JvmPertest</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>app-service-demo</name>
+    <name>JvmPertest</name>
     <!--<url>http://maven.apache.org</url>-->
     <url>http://repo.maven.apache.org/maven2</url>
 
