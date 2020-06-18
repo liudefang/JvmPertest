@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="JvmPertest:war exploded">
-    <output-path>$PROJECT_DIR$/target/app-service-demo</output-path>
+    <output-path>$PROJECT_DIR$/target/JvmPertest</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -41,7 +41,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/app-service-demo/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/JvmPertest/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="JvmPertest/web/Web" />
     </root>

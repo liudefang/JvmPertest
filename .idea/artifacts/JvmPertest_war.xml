@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="app-service-demo.war">
+    <root id="archive" name="JvmPertest.war">
       <element id="artifact" artifact-name="JvmPertest:war exploded" />
     </root>
   </artifact>
