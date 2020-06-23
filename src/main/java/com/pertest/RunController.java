@@ -37,6 +37,13 @@ public class RunController {
         return "jvm";
 
     }
+    @RequestMapping(value = "pertest0", method = RequestMethod.GET)
+    @ResponseBody
+    public String pertest0(HttpServletRequest request){
+        ThreadLocal<Byte[]> localVariable = new ThreadLocal<Byte[]>();
+        localVariable.set(new Byte[4096*1024]); //为线程添加变量
+        return "Thread success";
+    }
 
 
     static class OOMObject{
