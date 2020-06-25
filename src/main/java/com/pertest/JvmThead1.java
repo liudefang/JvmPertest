@@ -4,9 +4,9 @@ public class JvmThead1 {
     /**
      * 线程死锁等待演示
      */
-    public static class SynAddRunalbe implements Runnable{
+    public static class SynAddRunable implements Runnable{
         int a,b;
-        public SynAddRunalbe(int a, int b){
+        public SynAddRunable(int a, int b){
             this.a = a;
             this.b = b;
 

@@ -67,13 +67,13 @@ public class RunControllerbak {
     }
 
     // 线程死锁等待
-    @RequestMapping(value = "SynAddRunalbe", method = RequestMethod.GET)
+    @RequestMapping(value = "SynAddRunable", method = RequestMethod.GET)
     @ResponseBody
     public void SynAddRunalbe() {
         int i;
 
         for(i=0; i < 100; i++){
-            new Thread(new JvmThead1.SynAddRunalbe(1,3)).start();
+            new Thread(new JvmThead1.SynAddRunable(1,3)).start();
 
         }
     }

@@ -26,15 +26,15 @@ public class RunController {
     private SqlSessionFactory sqlSessionFactory;
 
     // jvm优化
-    @RequestMapping(value = "/test1")
+    @RequestMapping(value = "/pertestjvm", method = RequestMethod.GET)
     @ResponseBody
-    public String test1(HttpServletRequest request) {
-        List<Byte[]> temp = new ArrayList<Byte[]>();
+    public String pertestjvm(HttpServletRequest request) {
+        List<Byte[]> list = new ArrayList<Byte[]>();
 
         Byte[] b = new Byte[1024 * 1024];
-        temp.add(b);
+        list.add(b);
 
-        return "jvm";
+        return "success";
 
     }
     @RequestMapping(value = "pertest0", method = RequestMethod.GET)
@@ -62,15 +62,18 @@ public class RunController {
     }
 
     // 线程死锁等待
-    @RequestMapping(value = "SynAddRunalbe", method = RequestMethod.GET)
+    @RequestMapping(value = "SynAddRunable", method = RequestMethod.GET)
     @ResponseBody
-    public void SynAddRunalbe() {
+    public String SynAddRunable() {
         int i;
 
         for(i=0; i < 100; i++){
-            new Thread(new JvmThead1.SynAddRunalbe(1,3)).start();
+            new Thread(new JvmThead1.SynAddRunable(2,5)).start();
+            new Thread(new JvmThead1.SynAddRunable(5,2)).start();
 
         }
+
+        return "Thread_lock";
     }
 
     // 线程等待
@@ -183,6 +186,20 @@ public class RunController {
             unsafe.allocateMemory(_1MB);
         }
     }
+
+    //线程占用CPU比较高
+    @RequestMapping(value = "PerThreadTest", method = RequestMethod.GET)
+    @ResponseBody
+    public String PerThreadTest() {
+        new Thread(new ThreadPerTest.ThreadPerTask()).start();
+        new Thread(new ThreadPerTest.LazyTask()).start();
+        new Thread(new ThreadPerTest.LazyTask()).start();
+
+        return "ThreadPerTest run";
+
+    }
+
+
 
 
 
