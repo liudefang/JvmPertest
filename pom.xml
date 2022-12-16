@@ -10,7 +10,7 @@
     <url>http://repo.maven.apache.org/maven2</url>
 
     <properties>
-        <spring_version>4.2.8.RELEASE</spring_version>
+        <spring_version>5.2.20.RELEASE</spring_version>
         <jackson_version>2.4.4</jackson_version>
         <mybatis_version>3.2.6</mybatis_version>
     </properties>
